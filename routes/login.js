@@ -6,6 +6,8 @@ router.post(
   '/',
   passport.authenticate('local', {
     successRedirect: '/lose',
-    
+
   })
 )
+
+module.exports = router;
