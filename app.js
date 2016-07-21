@@ -4,10 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport')
+var session = require('express-session')
 
-
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var login = require('./routes/login');
+var lose = require('./routes/lose');
+var win = require('./routes/win');
+
+var setupPassport = require('./passportSetup');
 
 var app = express();
 
@@ -23,7 +28,16 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//Passport stuff below
+app.use(session({secret: 'our app is the bee knees'}))
+app.use(passport.initialize())
+app.use(passport.session())
+setupPassport()
+
 app.use('/login', login);
+app.use('/index', index);
+app.use('/lose', lose);
+app.use('/win', win);
 
 app.get('/', function(req, res) {
   res.redirect('/login')
