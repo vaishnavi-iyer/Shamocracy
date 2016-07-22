@@ -1,8 +1,1 @@
-{
-  "users": [
-      {"id": "1", "username": "Rich", "password": "rich"},
-      {"id": "2", "username": "Miles", "password": "miles"},
-      {"id": "3", "username": "Vaishnavi", "password": "vaishnavi"},
-      {"id": "4", "username": "Sean", "password": "sean"}
-  ]
-}
+{"users":[{"id":"1","username":"Rich","password":"rich"},{"id":"2","username":"Miles","password":"miles"},{"id":"3","username":"Vaishnavi","password":"vaishnavi"},{"id":"4","username":"Sean","password":"sean"},{"id":4,"username":"vai","password":"vai"},{"id":5,"username":"vai","password":"vai"},{"id":6,"username":"abcd","password":"abcd"},{"id":7,"username":"vai","password":"vai"}]}

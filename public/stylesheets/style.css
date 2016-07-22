@@ -8,10 +8,10 @@ html, body {
 
 }
 
-#login-container {
+#login-container, #signup-container{
   height: 100%;
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: url("../images/flag.jpg");
@@ -121,6 +121,14 @@ h3 {
 }
 
 
-#login-box {
+#login-box, #signup-box {
+  text-align: center;
+}
+
+#signuplink {
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  margin-top: 30px;
   text-align: center;
 }

@@ -11,6 +11,7 @@ var index = require('./routes/index');
 var login = require('./routes/login');
 var lose = require('./routes/lose');
 var win = require('./routes/win');
+var signup = require('./routes/signup');
 
 var setupPassport = require('./passportSetup');
 
@@ -38,6 +39,7 @@ app.use('/login', login);
 app.use('/index', index);
 app.use('/lose', lose);
 app.use('/win', win);
+app.use('/signup', signup);
 
 app.get('/', function(req, res) {
   res.redirect('/login')
