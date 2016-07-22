@@ -55,8 +55,7 @@ h1 {
 }
 
 #pictures img {
-  max-width: 100%;
-  max-height: 25rem;
+  max-height: 80%;
   margin: 0 2rem;
   border: 10px solid white;
 }
@@ -76,7 +75,7 @@ h1 {
   color: white;
   text-shadow: 4px 4px 5px #000000;
   font-weight: 600;
-  font-size: 8rem;
+  font-size: 550%;
 }
 
 #winContainer {
@@ -90,7 +89,7 @@ h1 {
   color: white;
   text-shadow: 4px 4px 5px #000000;
   font-weight: 600;
-  font-size: 8rem;
+  font-size: 550%;
 }
 
 #secret {
