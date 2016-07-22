@@ -1,13 +1,30 @@
-html, body {
+* {
   margin: 0;
-  min-height: 100%;
-  min-width: 100%;
-  /*align-items: stretch;*/
+}
+
+html, body {
+  /*padding: 2.5%;*/
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 #login-container {
   height: 100%;
-  width: 100%;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/flag.jpg");
+  background-size: cover;
+  color: white;
+  text-shadow: 4px 4px 5px #000000;
+
+}
+
+#vote-container {
+  height: 95%;
+  width: 95%;
   position: absolute;
   display:flex;
   flex-direction: row;
@@ -15,14 +32,21 @@ html, body {
   justify-content: center;
   align-content: flex-start;
   align-items: center;
-  background-image: url("../images/flag.jpg");
-  background-size: cover;
-}
-
-#login-box {
-
 }
 
 h1 {
-  margin: 0 auto auto auto;
+ font-weight: 300;
+ text-align: center;
+}
+
+/*#pictures {
+  display: flex;
+  position: absolute;
+  align-items: center;
+}*/
+
+#pictures img {
+  max-width: 40%;
+  height: 30rem;
+  margin: 1rem;
 }
