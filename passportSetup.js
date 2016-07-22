@@ -2,10 +2,12 @@ var passport =  require('passport')
 var LocalStrategy =  require('passport-local').Strategy
 var fs = require('fs')
 
-var users = fs.readFileSync('./data/data.json', 'utf-8').users
+var data = fs.readFileSync('./data/data.json', 'utf-8')
+var users = JSON.parse(data).users
 
 module.exports = function setup () {
   var strategy = new LocalStrategy(function (username, password, done) {
+    console.log('user', username, password)
     var user = users.find(function (user) {
       return user.username === username && user.password === password
     })
