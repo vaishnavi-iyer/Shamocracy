@@ -3,11 +3,16 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', ensureAuthenticated, function(req, res, next) {
-  res.render('/index', { title: 'Express' });
+  console.log('I am here', req.user)
+  res.render('index', { title: 'Express' });
 });
 
 function ensureAuthenticated(req, res, next){
-  if (req.isAuthenticated()){return next()}
+  if (req.isAuthenticated()){
+    console.log('authenticated')
+    return next()
+  }
+  console.log('not authenticated')
   res.redirect('login')
 }
 module.exports = router;
